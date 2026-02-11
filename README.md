@@ -41,7 +41,7 @@ Designed and delivered an enterprise-style Power BI reporting solution with **Ro
 ### Data Modeling
 - Built a **report-ready model** to support filtering by Policy Type, Claim Status, and Age Group
 - Created DAX measures for KPI reporting and segmentation analysis
-- Ensured efficient filter behavior and clean report performanceperformance.
+- Ensured efficient filter behavior and clean report performance.
 
 ### Tools & Technologies
 - SQL (data exploration / querying)
@@ -59,7 +59,6 @@ Designed and delivered an enterprise-style Power BI reporting solution with **Ro
 - Developed optimized DAX measures using `CALCULATE`, `FILTER`, and aggregations
 - Implemented dynamic date filtering for policy lifecycle analysis
 
-
 ### Row-Level Security (RLS) Implementation
 Implemented role-based access control to restrict managers to their respective **Policy Types**.
 
@@ -75,6 +74,8 @@ Steps:
 - Review Customer Feedback page to track sentiment categories and commonly reported service issues.
 
 ## Dashboard Snapshots (Power BI)
+The following dashboards provide a comprehensive view of insurance performance across policy lifecycle, claims management, and customer sentiment.
+
 ### Executive Overview Dashboard
 ![Executive Overview](images/executive_overview_dashboard.png)
 
@@ -108,7 +109,7 @@ Steps:
 - Claims-to-premium comparison indicates potential margin pressure in high-coverage segments
 - Travel policies generated the highest premium revenue
 - ~58% of policies are Active, indicating strong portfolio engagement
-- Rejected claims are higher than pending claims, suggesting documentation/underwriting gaps
+- Higher rejected claims compared to pending claims may indicate underwriting validation gaps or documentation quality issues.
 - Adult age group shows the highest claim amounts, indicating higher risk exposure in this segment
 
 ## Data Ethics & Disclaimer
