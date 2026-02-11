@@ -40,6 +40,7 @@ Delivered an enterprise-style Power BI reporting solution enabling secure, role-
 - Designed star schema model
 - Created relationships between Policy, Claims, and Customer tables
 - Implemented calculated columns and DAX measures
+- Optimized relationships to ensure efficient filter propagation and scalable report performance.
 
 ### Tools & Technologies
 - MySQL Server – Data storage
@@ -101,7 +102,7 @@ Insight:
 - Total Premium Revenue: 5.97M
 - Total Coverage Value: 600.33M
 - Total Claims Paid: 16.90M
-- Claims-to-premium analysis indicates margin pressure in high-coverage policy segments.
+- Claims-to-premium ratio analysis indicates margin pressure in high-coverage policy segments, highlighting potential underwriting risk.
 - Travel policies generated the highest premium revenue.
 - 58% of policies are Active, indicating strong portfolio engagement.
 - Rejected claims exceed pending claims, indicating potential underwriting or documentation gaps.
