@@ -18,7 +18,28 @@ This dashboard addresses critical business questions such as:
 - Revenue (Premium) vs Claim payouts
 - Customer satisfaction trends
 
-The solution provides management with a centralized, data-driven decision support system.
+Delivered an enterprise-style Power BI reporting solution enabling secure, role-based access and strategic performance monitoring.
+
+### Dataset Overview
+- Total Policies: 10,000
+- Total Customers: 10,000
+- Total Claims: 5646
+- Data Time Range: July 2023–July 2025
+- Dataset Features:
+	- Policy Number
+	- Customer ID
+	- Policy Type
+	- Claim Status
+	- Coverage Amount
+	- Premium Amount
+	- Claim Amount
+	- Age Group
+	- Customer Feedback
+
+### Data Model
+- Designed star schema model
+- Created relationships between Policy, Claims, and Customer tables
+- Implemented calculated columns and DAX measures
 
 ### Tools & Technologies
 - MySQL Server – Data storage
@@ -28,41 +49,17 @@ The solution provides management with a centralized, data-driven decision suppor
 - DAX
 - Power BI Service (Publishing + RLS + Scheduled Refresh)
 
-### Data Modeling
-- Designed star schema model
-- Created relationships between Policy, Claims, and Customer tables
-- Implemented calculated columns and DAX measures
-
-### Dataset Overview
-- Total Policies: 10,000
-- Total Customers: 10,000
-- Total Claims: 5646
-- Data Time Range: July 2023–July 2025
-
 ### Technical Highlights
 - Built dynamic KPI cards using DAX
 - Implemented drill-through and cross-filtering
-- Used Power Query for data transformation
-- Applied Row-Level Security (RLS)
-- Created sentiment analysis using AI Text Analytics
+- Performed data cleansing and transformation using Power Query (ETL process).
+- Implemented Row-Level Security (RLS) for secure, role-based data access.
+- Implemented customer sentiment analysis using Power BI AI Text Analytics.
 
 ### Row-Level Security (RLS) Implementation
 To ensure data confidentiality, Row-Level Security (RLS) was implemented so that each manager can view only the specific Policy Type relevant to them.
 
-Implementation Steps:
-1. Created roles in Power BI Desktop and applied filters based on PolicyType.
-2. Tested role behavior using “View as Role” in Power BI Desktop.
-3. Published the report to Power BI Service.
-4. Assigned users to respective roles and validated access permissions in Power BI Service.
-
-### Key Insights
-- Total Premium Revenue: 5.97M
-- Total Coverage Value: 600.33M
-- Total Claims Paid: 16.90M
-- Travel policies generated the highest premium revenue.
-- Majority of policies are Active (58%).
-- Rejected claims are higher than pending claims.
-- Adult age group contributes the highest claim amount.
+Implemented role-based access control to restrict managers to their respective Policy Types. Roles were created and tested in Power BI Desktop and validated in Power BI Service.
 
 ## Dashboard Snapshots (Power BI)
 ### Insurance Dashboard Overview
@@ -97,23 +94,15 @@ Implemented:
 	- Needs Improvement
 
 Insight:
-- Majority feedback is positive
+- Sentiment scoring indicates predominantly positive customer feedback.
 - Common issues: response delay & policy documentation clarity
 
-### Dataset Features
-- Policy Number
-- Customer ID
-- Policy Type
-- Claim Status
-- Coverage Amount
-- Premium Amount
-- Claim Amount
-- Age Group
-- Customer Feedback
-
-### Business Insights Summary
-- Travel policies contribute the highest premium revenue.
-- Adult age group generates maximum claims.
-- Rejected claims require further process review.
-- Active policies significantly outperform inactive.
-- Customer satisfaction is generally positive but operational delays exist.
+### Key Insights
+- Total Premium Revenue: 5.97M
+- Total Coverage Value: 600.33M
+- Total Claims Paid: 16.90M
+- Claims-to-premium analysis indicates margin pressure in high-coverage policy segments.
+- Travel policies generated the highest premium revenue.
+- 58% of policies are Active, indicating strong portfolio engagement.
+- Rejected claims exceed pending claims, indicating potential underwriting or documentation gaps.
+- Adult age group accounts for the highest claim amounts, indicating higher risk exposure in this segment.
