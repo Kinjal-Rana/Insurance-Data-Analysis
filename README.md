@@ -25,16 +25,17 @@ Delivered an enterprise-style Power BI reporting solution enabling secure, role-
 - Total Customers: 10,000
 - Total Claims: 5646
 - Data Time Range: July 2023–July 2025
-- Dataset Features:
-	- Policy Number
-	- Customer ID
-	- Policy Type
-	- Claim Status
-	- Coverage Amount
-	- Premium Amount
-	- Claim Amount
-	- Age Group
-	- Customer Feedback
+
+## Dataset Features:
+- Policy Number
+- Customer ID
+- Policy Type
+- Claim Status
+- Coverage Amount
+- Premium Amount
+- Claim Amount
+- Age Group
+- Customer Feedback
 
 ### Data Model
 - Designed star schema model
@@ -46,21 +47,30 @@ Delivered an enterprise-style Power BI reporting solution enabling secure, role-
 - MySQL Server – Data storage
 - SQL – Data querying
 - Power BI Desktop
-- Power Query
+- Power Query (ETL)
 - DAX
 - Power BI Service (Publishing + RLS + Scheduled Refresh)
 
 ### Technical Highlights
-- Built dynamic KPI cards using DAX
-- Implemented drill-through and cross-filtering
-- Performed data cleansing and transformation using Power Query (ETL process).
-- Implemented Row-Level Security (RLS) for secure, role-based data access.
-- Implemented customer sentiment analysis using Power BI AI Text Analytics.
+- Built dynamic KPI cards using DAX (Premium, Coverage, Claim Amount)
+- Implemented drill-through and cross-filtering for deeper analysis
+- Cleaned and transformed data using Power Query (ETL).
+- Implemented Row-Level Security (RLS) for role-based access
+- Performed sentiment analysis using Power BI AI Text Analytic
 
 ### Row-Level Security (RLS) Implementation
-To ensure data confidentiality, Row-Level Security (RLS) was implemented so that each manager can view only the specific Policy Type relevant to them.
+Implemented role-based access control to restrict managers to their respective Policy Types. 
 
-Implemented role-based access control to restrict managers to their respective Policy Types. Roles were created and tested in Power BI Desktop and validated in Power BI Service.
+Steps:
+1. Created roles in Power BI Desktop with PolicyType filters
+2. Tested using “View as Role”
+3. Published to Power BI Service
+4. Assigned users to roles and validated permissions in Service
+
+## How to Use the Dashboard
+- Use slicers (PolicyType, ClaimStatus, AgeGroup) to filter insights
+- Use drill-through to investigate policy and claim details by segment
+- Review Customer Feedback page to track sentiment categories and common
 
 ## Dashboard Snapshots (Power BI)
 ### Insurance Dashboard Overview
@@ -78,25 +88,19 @@ Main Insurance Dashboard Overview
 ![Policy & Claims Analysis](images/policy_claims_analysis.png)
 
 Features:
-- Drill-through functionality by PolicyType
-- Non-aggregated fields
+- Drill-through by PolicyType
 - Policy Start/End tracking
 - Claim history tracking
 
 ### Customer Feedback Analysis
 ![Customer Feedback Analysis](images/customer_feedback_dashboard.png)
 
-Implemented:
-- Power BI AI Text Analytics
+Includes:
 - Sentiment scoring (0 to 1 scale)
-- Categorized feedback:
-	- Excellent
-	- Good
-	- Needs Improvement
+- Categorized feedback (Excellent, Good, Needs Improvement)
 
-Insight:
-- Sentiment scoring indicates predominantly positive customer feedback.
-- Common issues: response delay & policy documentation clarity
+Key note:
+- Feedback is mostly positive; common issues include response delays and documentation clarity
 
 ### Key Insights
 - Total Premium Revenue: 5.97M
@@ -107,3 +111,7 @@ Insight:
 - 58% of policies are Active, indicating strong portfolio engagement.
 - Rejected claims exceed pending claims, indicating potential underwriting or documentation gaps.
 - Adult age group accounts for the highest claim amounts, indicating higher risk exposure in this segment.
+
+## Data Ethics & Disclaimer
+This project uses a synthetic/anonymized dataset for learning and portfolio purposes.
+It does not represent real customer or insurance data.
